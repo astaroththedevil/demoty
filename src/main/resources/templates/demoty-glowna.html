@@ -3,16 +3,22 @@
       xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Demoty</title>
+  <title>Demoty - strona główna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Vujahday+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/demoty.css}"/>
 </head>
 <body>
   <h1>Demoty</h1>
-  <h2>Strona główna</h2>
-  <nav>
+  <nav class="navigation">
     <ul>
-      <li><a th:href="@{/login}">Zaloguj</a></li>
-      <li><a th:href="@{/register}">Zarejestruj się</a></li>
+      <a th:href="@{/login}"><li>Zaloguj się</li></a>
+      <a th:href="@{/register}"><li>Zarejestruj się</li></a>
     </ul>
   </nav>
+  <main>
+
+  </main>
 </body>
 </html>
