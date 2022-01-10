@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Data
@@ -26,6 +27,7 @@ public class Post {
     private String topText;
 
     @Column(name = "bottom_text")
+    @Size(min = 8, message = "Text must be at lest 8 characters long")
     private String bottomText;
 
     @Lob
