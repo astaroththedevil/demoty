@@ -18,6 +18,6 @@ public class MainSiteController {
     @GetMapping("/demoty-glowna")
     public String showMainSite(Model model) {
         model.addAttribute("posts", postService.getAllPosts());
-        return "index";
+        return "demoty-glowna";
     }
 }
