@@ -22,15 +22,19 @@ public class User {
     @NotNull
     @Column(name = "user_id")
     private Integer id;
+
     @Column(name = "login")
     @Size(min = 6, max = 30, message = "Login must be at least 6 and at most 30 characters long.")
     private String login;
+
     @Column(name = "password")
     @Size(min = 8, max = 30, message = "Password must be at least 6 and at most 30 characters long.")
     private String password;
+
     @Column(name = "email")
     @Email
     private String email;
+
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
 }

@@ -19,10 +19,13 @@ public class Post {
     @NotNull
     @Column(name = "post_id")
     private Integer id;
+
     @Column(name = "top_text")
     private String topText;
+
     @Column(name = "bottom_text")
     private String bottomText;
+
     @Lob
     @Column(name = "image")
     private byte[] image;
