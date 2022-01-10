@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -30,6 +31,9 @@ public class Post {
     @Lob
     @Column(name = "image")
     private byte[] image;
+
+    @Column(name = "date_of_adding_post")
+    private LocalDate date;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
