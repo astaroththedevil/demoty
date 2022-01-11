@@ -23,7 +23,7 @@ public class User {
     @Column(name = "user_id")
     private Integer id;
 
-    @Column(name = "login")
+    @Column(name = "login", unique = true)
     @Size(min = 6, max = 30, message = "Login must be at least 6 and at most 30 characters long.")
     private String login;
 
@@ -31,7 +31,7 @@ public class User {
     @Size(min = 8, max = 30, message = "Password must be at least 6 and at most 30 characters long.")
     private String password;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     @Email
     private String email;
 
